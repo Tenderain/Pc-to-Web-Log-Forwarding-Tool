@@ -1,0 +1,20 @@
+# NAS WebSocket 中继服务 - Docker Compose
+# 用于飞牛OS DPanel部署
+
+version: "3.8"
+
+services:
+  log-relay:
+    build: .
+    container_name: log-relay-server
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./nas_relay_server.py:/app/nas_relay_server.py
+    networks:
+      - log-relay-net
+
+networks:
+  log-relay-net:
+    driver: bridge

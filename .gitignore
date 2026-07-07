@@ -179,3 +179,7 @@ __marimo__/
 
 # Trae Code 模式迁移说明 - 不上传
 TRAECODE.md
+
+# Windows 修复脚本 - 不上传
+Docker-Compose/fix_py_association.ps1
+Docker-Compose/fix_py_association.reg
